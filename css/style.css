@@ -10,6 +10,10 @@ body {
   background: #010101;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 0) {
   #container {
     align-items: center;
@@ -30,13 +34,28 @@ body {
   #screen, #result {
     background: none;
     border: none;
-    color: #427f03;
+    color: #44e620;
     font-size: 30px;
     font-weight: 600;
     height: 50px;
     outline: none;
     text-align: end;
     width: 100%;
+  }
+
+  #menu {
+    border-bottom: 1px solid #2b2b2b;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+    width: 90%;
+  }
+
+  .menuKeys {
+    background: none;
+    border: none;
+    height: 20px;
+    width: 20px;
   }
 
   #keyboard {
@@ -49,10 +68,10 @@ body {
   }
 
   .keys {
-    background: #171717;
+    background: #141c1e;
     border: none;
     border-radius: 50%;
-    color: #427f03;
+    color: #44e620;
     font-size: 20px;
     font-weight: 600;
     height: 60px;
@@ -61,7 +80,21 @@ body {
   }
 
   .keys:hover {
-    cursor: pointer;
-    background: #292929;
+    background: #1d292c;
+  }
+
+  .symbols {
+    color: #63b7c6;
+  }
+
+  #clear {
+    color: #9e2c21;
+  }
+
+  #equals {
+    background: #63b7c6;
+    border-radius: 10px;
+    color: #ffffff;
+    width: 130px;
   }
 }
