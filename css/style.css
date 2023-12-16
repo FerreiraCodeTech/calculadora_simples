@@ -59,12 +59,16 @@ button:hover {
   }
 
   #keyboard {
-    display: flex;
+    align-items: center;
+    display: grid;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 50vh;
-    justify-content: space-around;
-    width: 90%;
+    gap: 5px 5px;
+    grid-template-columns: repeat(4, minmax(70px, auto));
+    grid-auto-rows: minmax(70px, auto);
+    height: auto;
+    justify-items: center;
+    width: auto;
   }
 
   .keys {
@@ -78,11 +82,11 @@ button:hover {
     user-select: none;
     width: 60px;
   }
-
+  
   .keys:hover {
     background: #1d292c;
   }
-
+  
   .symbols {
     color: #63b7c6;
   }
@@ -95,6 +99,7 @@ button:hover {
     background: #63b7c6;
     border-radius: 10px;
     color: #ffffff;
+    grid-column: 3 / 5;
     width: 130px;
   }
 }
