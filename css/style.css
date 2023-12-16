@@ -121,11 +121,13 @@ button:hover {
   }
 
   .keys {
+    font-size: 25px;
     height: 80px;
     width: 80px;
   }
 
   #equals {
+    font-size: 25px;
     width: 170px;
   }
 }
