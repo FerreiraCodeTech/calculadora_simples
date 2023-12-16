@@ -20,9 +20,9 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0 auto;
-    width: 320px;
+    width: 100%;
   }
 
   #display {
@@ -31,7 +31,8 @@ button:hover {
     width: 90%;
   }
 
-  #screen, #result {
+  #screen,
+  #result {
     background: none;
     border: none;
     color: #44e620;
@@ -82,11 +83,11 @@ button:hover {
     user-select: none;
     width: 60px;
   }
-  
-  .keys:hover {
+
+  /* .keys:hover {
     background: #1d292c;
-  }
-  
+  } */
+
   .symbols {
     color: #63b7c6;
   }
@@ -101,5 +102,30 @@ button:hover {
     color: #ffffff;
     grid-column: 3 / 5;
     width: 130px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #screen,
+  #result {
+    height: 70px;
+  }
+
+  #menu {
+    height: 60px;
+  }
+
+  #keyboard {
+    grid-template-columns: repeat(4, minmax(90px, auto));
+    grid-auto-rows: minmax(90px, auto);
+  }
+
+  .keys {
+    height: 80px;
+    width: 80px;
+  }
+
+  #equals {
+    width: 170px;
   }
 }
