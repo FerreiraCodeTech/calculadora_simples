@@ -9,7 +9,9 @@ function addKeysOntheScreen(event) {
   let keyPress = event.target.textContent;
 
   if(keyPress.match(/^[0-9]*$|^\+|-|\*|\/|%|\.|/)) {
-    screen.value += keyPress;
+    if(!keyPress.match(/^[a-zA-Z=]*$/)) {
+      screen.value += keyPress;
+    }
   }
 }
 
@@ -33,9 +35,5 @@ const EQUALS = document.getElementById('equals').addEventListener('click', funct
 });
 
 for (let i = 0; i < NUMBERS.length; i++) {
-  let keyPress = NUMBERS[i].textContent;
-  
-  if(!keyPress.match(/^[a-zA-Z=]*$/)) {
     NUMBERS[i].addEventListener('click', addKeysOntheScreen);
-  }
 }
