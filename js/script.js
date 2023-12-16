@@ -28,9 +28,8 @@ const EQUALS = document.getElementById('equals').addEventListener('click', funct
   try {
     resultScreen.value = eval(screen.value);
   } catch (error) {
-    resultScreen.value = error.name;
+    resultScreen.value = error.nodeName;
   }
-
   screen.value = null;
 });
 
