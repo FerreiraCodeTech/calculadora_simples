@@ -5,34 +5,36 @@ const NUMBERS = document.getElementsByClassName('keys');
 let screen = document.getElementById('screen');
 let resultScreen = document.getElementById('result');
 
-function addKeysOntheScreen(event) {
-  let keyPress = event.target.textContent;
-
-  if(keyPress.match(/^[0-9]*$|^\+|-|\*|\/|%|\.|/)) {
-    if(!keyPress.match(/^[a-zA-Z=]*$/)) {
-      screen.value += keyPress;
-    }
-  }
-}
-
-const CLEAR = document.getElementById('clear').addEventListener('click', function clear() {
-  screen.value = null
-  resultScreen.value = null
+document.getElementById('clear').addEventListener('click', function () {
+  screen.value = null;
+  resultScreen.value = null;
 });
 
-const CLEAR_ENTRY = document.getElementById('clearEntry').addEventListener('click', function clearEntry() {
+document.getElementById('clearEntry').addEventListener('click', function () {
   screen.value = screen.value.slice(0, -1);
 });
 
-const EQUALS = document.getElementById('equals').addEventListener('click', function equals() {
+document.getElementById('equals').addEventListener('click', function () {
   try {
     resultScreen.value = eval(screen.value);
   } catch (error) {
     resultScreen.value = error.nodeName;
+  } finally {
+    screen.value = null;
   }
-  screen.value = null;
 });
 
+function addKeysOntheScreen(event) {
+  let keyPress = event.target.textContent;
+
+  if (keyPress.match(/^[0-9]*$|^\+|-|\*|\/|%|\.|/))  {
+    if (!keyPress.match(/^[a-zA-Z=]*$/)) {
+      screen.value += keyPress;
+      resultScreen.value = null;
+    }
+  }
+}
+
 for (let i = 0; i < NUMBERS.length; i++) {
-    NUMBERS[i].addEventListener('click', addKeysOntheScreen);
+  NUMBERS[i].addEventListener('click', addKeysOntheScreen);
 }
