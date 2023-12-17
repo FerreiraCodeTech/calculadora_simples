@@ -21,14 +21,13 @@ button:hover {
     height: 100vh;
     justify-content: space-evenly;
     margin: 0 auto;
-    max-width: 375px;
-    min-width: auto;
     width: 100%;
   }
 
   #display {
     display: flex;
     flex-direction: column;
+    max-width: 375px;
     width: 90%;
   }
 
@@ -50,6 +49,7 @@ button:hover {
     display: flex;
     height: 40px;
     justify-content: flex-end;
+    max-width: 375px;
     width: 90%;
   }
 
@@ -84,10 +84,6 @@ button:hover {
     user-select: none;
     width: 60px;
   }
-
-  /* .keys:hover {
-    background: #1d292c;
-  } */
 
   .symbols {
     color: #63b7c6;
