@@ -10,14 +10,15 @@
   <script src="./js/script.js" async></script>
   <script src="https://kit.fontawesome.com/7f9114bfc9.js" crossorigin="anonymous" async></script>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
   <title>Calculadora Simples</title>
 </head>
 <body>
   <main>
     <div id="container">
       <div id="display">
-        <input type="text" id="screen" readonly>
-        <input type="text" id="result" readonly>
+        <input type="text" id="screen" maxlength="10" readonly>
+        <input type="text" id="result" maxlength="10" readonly>
       </div>
       <div id="menu">
         <button class="menuKeys" id="clearEntry"><i class="fa-solid fa-delete-left" style="color: #63b7c6;"></i></button>
