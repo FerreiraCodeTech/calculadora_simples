@@ -56,7 +56,7 @@ for (let i = 0; i < NUMBERS.length; i++) {
 
 ## **Uso**
 
-Abra o arquivo github page: https://ferreiracodetech.github.io/calculadora_simples/ em um navegador.
+Abra o arquivo github page: [Projeto](https://ferreiracodetech.github.io/calculadora_simples/) em um navegador.
 
 Clique nos botões numéricos e operadores para realizar cálculos.
 
